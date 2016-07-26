@@ -55,9 +55,11 @@ Each row of input is a game with two players. The first five cards belong to the
 
 Sample output:
 
-`White wins. - with high card: Ace`
-`White wins. - with flash`
-`Black wins. - with high card: 9`
-`Tie.`
+```
+White wins. - with high card: Ace
+White wins. - with flash
+Black wins. - with high card: 9
+Tie.
+```
 
 Web: http://codingdojo.org/cgi-bin/index.pl?KataPokerHands
