@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Poker hands kata</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/solarized.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+	  <div class="reveal">
+	    <div class="slides">
+	      <section>
+                <h1>Poker hands kata</h1>
+                <img src="images/poker.jpg" class="stretch">
+              </section>
+	      <section>
+                <h1>The kata</h1>
+                <a href="http://codingdojo.org/cgi-bin/index.pl?KataPokerHands">http://codingdojo.org/cgi-bin/index.pl?KataPokerHands</a>
+              </section>
+	      <section>Your job is to compare several pairs of poker hands</section>
+	      <section>
+                <h2>The cards</h2>
+                <ul>
+                  <li>A poker deck contains 52 cards</li>
+                  <li>Each card has a suit which is one of clubs (<b>C</b>), diamonds (<b>D</b>), hearts (<b>H</b>), or spades (<b>S</b>)</li>
+                  <li>Each card also has a value: 2, 3, 4, 5, 6, 7, 8, 9, 10 (T), jack (J), queen (Q), king (K), ace (A)</li>
+                  <li>The suits are unordered</li>
+                  <li>The values are ordered with 2 being the lowest and ace the highest</li>
+                </ul>
+              </section>
+	      <section>
+                <h1>Hands</h1>
+                <ul>
+                  <li>High Card</li>
+                  <li>Pair</li>
+                  <li>Two Pairs</li>
+                  <li>Three of a Kind</li>
+                  <li>Straight</li>
+                  <li>Flush</li>
+                  <li>Full House</li>
+                  <li>Four of a kind</li>
+                  <li>Straight flush</li>
+                </ul>
+              </section>
+              <section>
+                <h1>Sample</h1>
+                <pre><code data-trim data-noescape>
+Black: 2H 3D 5S 9C KD  White: 2C 3H 4S 8C AH
+Black: 2H 4S 4C 2D 4H  White: 2S 8S AS QS 3S
+Black: 2H 3D 5S 9C KD  White: 2C 3H 4S 8C KH
+Black: 2H 3D 5S 9C KD  White: 2D 3H 5C 9S KH
+                </code></pre>
+                <h2>Output</h2>
+                <pre><code data-trim data-noescape>
+White wins. - with high card: Ace
+White wins. - with flush
+Black wins. - with high card: 9
+Tie.
+                </code></pre>
+              </section>
+	      <section>
+                <h1>Dojo rules</h1>
+                <ul>
+                  <li>Try to pair with somebody new</li>
+                  <li>Try to be "perfect"</li>
+                  <li>Experiment</li>
+                  <li>Feel free to invest more time in places you often can't</li>
+                </ul>
+              </section>
+	      <section>
+                <h1>Have fun!</h1>
+                <img class="stretch viewport" src="images/grin.png">
+              </section>
+	    </div>
+	  </div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
